@@ -2,15 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CityTime from './clock_header.js';
-import ClockHeader from './heading.js';
 
 let atm = new Date();
-console.log(atm);
-const hour = 60*1000;
-
 let currentTime = atm.toLocaleTimeString();
 let londonTime = new Date().toLocaleTimeString('en-GB', {timeZone: "Europe/London"});
-;
 let parisTime = new Date().toLocaleTimeString('en-GB', {timeZone: "Europe/Paris"});
 
 class App extends Component {
@@ -38,7 +33,6 @@ class App extends Component {
   render() {
     return (
     <div>
-      <div><ClockHeader/></div>
      <CityTime currentTime={this.state.atlanta} city="Atlanta"/>
      <CityTime currentTime={this.state.newYork} city="New York"/>
      <CityTime currentTime={this.state.london} city="London"/>
@@ -47,16 +41,5 @@ class App extends Component {
     );
   }
 }
-
-// _changeNumber = () => {
-//       setInterval(this.setState({
-//         atlanta: currentTime,
-//         newYork: currentTime,
-//         london: londonTime, 
-//         paris: parisTime
-//       }));
-//       // console.log(theNumber);
-//     }
-
 
 export default App;
