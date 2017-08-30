@@ -26,8 +26,8 @@ class App extends Component {
     this.setState({
       atlanta: new Date().toLocaleTimeString(),
       newYork: new Date().toLocaleTimeString(),
-      london: new Date().toLocaleTimeString('en-GB', {timeZone: "Europe/London"}), 
-      paris: new Date().toLocaleTimeString('en-GB', {timeZone: "Europe/Paris"})
+      london: new Date().toLocaleTimeString('en-US', {timeZone: "Europe/London"}), 
+      paris: new Date().toLocaleTimeString('en-US', {timeZone: "Europe/Paris"})
     });
   }
   render() {
