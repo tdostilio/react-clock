@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CityTime from './clock_header.js';
+import Add_City from './add_button.js';
+
 
 let atm = new Date();
 let currentTime = atm.toLocaleTimeString();
@@ -33,12 +35,21 @@ class App extends Component {
   render() {
     return (
     <div>
-     <CityTime currentTime={this.state.atlanta} city="Atlanta"/>
-     <CityTime currentTime={this.state.newYork} city="New York"/>
-     <CityTime currentTime={this.state.london} city="London"/>
-     <CityTime currentTime={this.state.paris} city="Paris"/>
+      <div>
+      <CityTime currentTime={this.state.atlanta} city="Atlanta"/>
+      </div>
+      <div>
+      <CityTime currentTime={this.state.newYork} city="New York"/>
+      </div>
+      <div>
+      <CityTime currentTime={this.state.london} city="London"/>
+      </div>
+      <div>
+      <CityTime currentTime={this.state.paris} city="Paris"/>
+      </div>
+      <Add_City/>    
     </div>
-    );
+    )
   }
 }
 
